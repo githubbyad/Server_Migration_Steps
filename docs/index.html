@@ -100,6 +100,15 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        
+        cd {
+            color: #c444c4;
+        }
+        
+        txt {
+            color: black;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -115,7 +124,8 @@
                         <textarea>https://bulletlink.one/loginstaff.asp?site=SITENAME.com</textarea>
                     </li>
                     <li>
-                        <h3>Replace {{PutCharset}} with below link:
+                        <h3>Replace
+                            <cd>{{PutCharset}}</cd> with below link:
                             <h3>
                                 <textarea spellcheck="false">
 <meta charset="UTF-8">
@@ -130,20 +140,30 @@
                     </li>
 
                     <li>
-                        <h3>Replace "{{PutHName}}" with "{{PutDomain}}" please remove slahd "/"</h3>
+                        <h3>Replace
+                            <cd>{{PutHName}}</cd> with
+                            <cd>{{PutDomain}}</cd> please remove slahd
+                            <cd>/</cd>
+                        </h3>
                     </li>
                     <li>
-                        <h3> Replace "/" with "/lib/" only under header command files </h3>
+                        <h3> Replace
+                            <cd>/</cd> with
+                            <cd>/lib/</cd> only under header command files </h3>
                     </li>
                     <li>
-                        <h3> Add below link just below the costom.css</h3>
+                        <h3> Add below link just below the
+                            <fd>custom.css</fd>
+                        </h3>
 
                         <textarea spellcheck="false">
 <script type="text/javascript" language="javascript" src="{{PutDomain}}lib/iframeResizer.min.js"></script></textarea>
                     </li>
 
                     <li>
-                        <h3>Add below link below the hostmane.js</h3>
+                        <h3>Add below link below the
+                            <fd>hostmane.js</fd>
+                        </h3>
                         <textarea spellcheck="false">
 <script type="text/javascript" language="javascript" src="{{PutDomain}}settings.js?v=9.000009"></script>
 <script type="text/javascript" language="javascript" src="{{PutDomain}}articles.js?v=9.000009"></script>
@@ -160,16 +180,24 @@
                         <h3>Now, Create user and submit article,ads,menu,poll </h3>
                     </li>
                     <li>
-                        <h3>Add below 2 link in default form:</h3>
+                        <h3>Add below 2 links in
+                            <ff>Default Layout</ff>'s Form area</h3>
 
                         <textarea spellcheck="false">
 <link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
 <script src="{{PutAppServer}}iframe-resizer-master/js/iframeResizer.contentWindow.js"></script></textarea>
                     </li>
-
                     <li>
-                        <h3>Move links from target_form.asp to target_form2.asp</h3> <br>Adnan: What to do with css class (kynewsgroup.com) --> blbodymain {visibility: hidden;} Note: Some time there may be some issue with the link. So you can use your knowledge
-                        to fix those js issues. <br>Adnan: After following the steps from and services package has the issue. Can you please update the above steps to fix the form issue so we can provide the above steps to all staff.
+                        <h3>Full Link is required for images. Make sure to add
+                            <cd>{{MakeFullLinks:Yes}}</cd> command all layouts.</h3>
+                    </li>
+                    <li>
+                        <h3>Move links from
+                            <cd>target_form.asp</cd> to
+                            <cd>target_form2.asp</cd>
+                        </h3> <br>
+                        <txt>Adnan: What to do with css class (kynewsgroup.com) --> blbodymain {visibility: hidden;} Note: Some time there may be some issue with the link. So you can use your knowledge to fix those js issues. <br>Adnan: After following the
+                            steps from and services package has the issue. Can you please update the above steps to fix the form issue so we can provide the above steps to all staff</txt>
                     </li>
 
                 </ol>
