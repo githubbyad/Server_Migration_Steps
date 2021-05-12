@@ -154,8 +154,13 @@
                 <ol>
 
                     <li>
-                        <h3>Login link:</h3>
-                        <textarea spellcheck="false" readonly>https://bulletlink.one/loginstaff.asp?site=SITENAME.com</textarea>
+                        <h3>Login link:<br>Make sure to change website URL in place of "SITENAME.COM"</h3>
+                        <textarea spellcheck="false" readonly>https://bulletlink.one/loginstaff.asp?site=SITENAME.com
+SITENAME.COM/admin
+SITENAME.COM/login
+SITENAME.COM/login.asp
+SITENAME.COM/sign
+SITENAME.COM/signin</textarea>
                     </li>
                     <li>
                         <h3>Replace
@@ -227,12 +232,13 @@
                             <cd>{{MakeFullLinks:Yes}}</cd> command all layouts. If command will not work, then contact Adnan as it will also create JS errors in hostname.js</h3>
                     </li>
                     <li>
-                        <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.</h3>
+                        <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>Make sure to change website URL in place
+                            of "SITENAME.COM"</h3>
                         <textarea>new member: 
-<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=kynewsgroup.com" style="color:#990000;">new member</a>
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">new member</a>
 
 forgot password?: 
-<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=kynewsgroup.com" style="color:#990000;">forgot password?</a></textarea>
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a></textarea>
                     </li>
                     <li>
                         <h3>Move links from
