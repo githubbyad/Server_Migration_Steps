@@ -116,6 +116,22 @@
             margin-bottom: 20px;
         }
         
+        .button {
+            text-decoration: none;
+            background: #4caf50;
+            display: inline-block;
+            color: white;
+            padding: 0 40px;
+            border-radius: 5px;
+            line-height: 35px;
+            font-size: 15px;
+        }
+        
+        txt {
+            width: 100%;
+            float: left;
+        }
+        
         fd,
         ff {
             color: red;
@@ -234,19 +250,61 @@ SITENAME.COM/signin</textarea>
                     <li>
                         <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>Make sure to change website URL in place
                             of "SITENAME.COM"</h3>
-                        <textarea>new member: 
+                        <textarea spellcheck="false" readonly>new member: 
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">new member</a>
 
 forgot password?: 
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a></textarea>
                     </li>
                     <li>
+                        <h3>"mainbody" class should be added Just after "blbodymain" DIV. See below: <br>
+                            <img src="https://raw.githubusercontent.com/githubbyad/Files/main/tdst.png">
+                        </h3> <br>
+                    </li>
+                    <li>
+                        <h3>Place below JS code in "SM Fields (JS file)" field under "Settings-Staff". If old code was there, then remove that code first.<br>
+                            <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.js" target="_blank">SM Fields (JS file)</a><br><br> Place below CSS code in "SM Fields (CSS file)" field under "Settings-Staff". If old
+                            code was there, then remove that code first.<br>
+                            <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.css" target="_blank">SM Fields (CSS file)</a>
+                        </h3> <br>
+                    </li>
+                    <li>
+                        <h3>We have demo sites having top links such as Contact Us", "Login", etc. We will now have new link for these Forms. Set below URL as for link.<br>
+                            <textarea spellcheck="false" readonly>https://SITENAME.COM/index0.htm?twindow=Form&smenu=115&pform=FORMNAME&mad=No&sname=target_form2.asp&site=SITENAME.COM&as=https://bulletlink.one</textarea> <br><br>
+                            <txt>Where, SITENAME.COM is the website URL and FORMNAME is the form name such as "ContactUs", {{Login}}</txt>
+                        </h3> <br>
+                    </li>
+                    <li>
                         <h3>Move links from
                             <cd>target_form.asp</cd> to
                             <cd>target_form2.asp</cd>
+                        </h3>
+                    </li>
+
+                    <li>
+                        <h3>We have set JS and CSS to restrict folder sites earlier. However, we will not face such issue on new server.<br>So we will remove these changes. Follow the below steps:
+                            <Br> <br>- Remove below CSS from custom.css<br> <textarea spellcheck="false" readonly style="height: 27px !important;">.blbodymain {visibility: hidden;}</textarea>
+                            <br><br>- Remove below JS from custom.js<br>
+                            <textarea spellcheck="false" readonly>// BEGIN: Restrict Demo Domain
+
+$(document).ready(function () {
+var url2 = location.href.split('/');
+var lurl2 = url2[url2.length - 2];
+if (lurl2.indexOf('.') === - 1) {
+if ($(location).attr('hostname') != 'bulletlink.com') {
+window.open('/', '_top');
+}
+else {
+$('.blbodymain').css('visibility', 'visible');
+}
+}
+else {
+$('.blbodymain').css('visibility', 'visible');
+}
+});
+
+// END: Restrict Demo Domain</textarea>
                         </h3> <br>
-                        <txt>Adnan: What to do with css class (kynewsgroup.com) --> blbodymain {visibility: hidden;} Note: Some time there may be some issue with the link. So you can use your knowledge to fix those js issues. <br>Adnan: After following the
-                            steps from and services package has the issue. Can you please update the above steps to fix the form issue so we can provide the above steps to all staff</txt>
                     </li>
 
                 </ol>
