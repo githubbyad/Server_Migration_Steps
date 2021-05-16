@@ -325,12 +325,27 @@ $('.blbodymain').css('visibility', 'visible');
                             <textarea spellcheck="false" readonly style="height: 27px !important;"><input type="text" id="username" name="username" required></textarea>
                             <txt>Take final form code from <a href="https://bulletlink.one/loginstaff.asp?site=newspaperpal.com" target="_blank">newspaperpal.com</a> and apply css as per client sites.</txt>
                         </h3>
-                        <li>
-                            <h3>Make sure to remove the following commands from ALL layouts:<br>
+                    </li>
+                    <li>
+                        <h3>
+                            Look for
+                            <cd>{{ElseIf FieldType=Date}}</cd> in Form Layout under
+                            <ff>Default Layout</ff> and remove
+                            <txt>onkeypress="return false;" readonly</txt> from the
+                            <cd>
+                                INPUT
+                            </cd> code. See below screeshot,
+                            <Br>
+                            <img src="https://raw.githubusercontent.com/githubbyad/Files/main/date_new.png">
 
-                                <cd> {{PutHName}}<br>{{PutTFolder}}<br>{{PutHExt}}<br>{{Http}}</cd>
-                            </h3>
-                        </li>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>Make sure to remove the following commands from ALL layouts:<br>
+
+                            <cd> {{PutHName}}<br>{{PutTFolder}}<br>{{PutHExt}}<br>{{Http}}</cd>
+                        </h3>
+                    </li>
                     </li>
                 </ol>
             </div>
