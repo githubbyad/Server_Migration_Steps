@@ -1,0 +1,358 @@
+<html>
+
+<head>
+    <title>Server Migration Steps</title>
+    <style>
+        li {
+            float: left;
+            width: 100%;
+            margin-bottom: 40px;
+            color: #4caf50;
+            box-sizing: border-box;
+        }
+        
+        .wrap_innner2 {
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%23c9d1cb' fill-opacity='0.16'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+            width: 100%;
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 100px;
+        }
+        
+        li {
+            font-size: 25px;
+            line-height: 30px;
+            border-left: 5px solid #4caf50;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        
+        li {
+            background: white;
+            box-shadow: 0px 0px 5px #4caf50;
+            transition: 300ms linear;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .wrap {
+            width: 100%;
+            float: left;
+        }
+        
+        .wrap_innner {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        textarea {
+            float: left;
+            clear: both;
+            width: 1000px;
+        }
+        
+        body {
+            font-family: Trebuchet MS;
+        }
+        
+        h3 {
+            color: #34c434;
+            font-size: 16px;
+        }
+        
+        textarea {
+            border-color: #34c434;
+            border-radius: 5px;
+            border-width: 1px;
+            transition: 300ms linear;
+            height: 50px;
+        }
+        
+        textarea:hover {
+            height: 150px;
+            transition: 300ms linear;
+        }
+        
+        .sticky {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            line-height: 30px;
+            color: white;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        dmt {
+            width: 100%;
+            text-align: center;
+            float: left;
+            font-size: 45px;
+            border-bottom: 2px solid;
+            color: #4caf50;
+            float: left;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            text-decoration: none;
+            background: #4caf50;
+            display: inline-block;
+            color: white;
+            padding: 0 40px;
+            border-radius: 5px;
+            line-height: 35px;
+            font-size: 15px;
+        }
+        
+        txt {
+            width: 100%;
+            float: left;
+        }
+        
+        fd,
+        ff {
+            color: red;
+        }
+        
+        .sticky a {
+            text-decoration: none !important;
+            color: white;
+            font-weight: bold !important;
+        }
+        
+        .sticky a:hover {
+            color: black;
+        }
+        
+        .sticky:hover {
+            background: red;
+        }
+        
+        cd {
+            color: #c444c4;
+        }
+        
+        txt {
+            color: black;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <dmt>Server Migration - Instructions</dmt><br>
+    <div class="wrap">
+        <div class="wrap_innner">
+            <div class="wrap_innner2">
+                <ol>
+
+                    <li>
+                        <h3>Login link:<br>Make sure to change website URL in place of "SITENAME.COM"</h3>
+                        <textarea spellcheck="false" readonly>https://bulletlink.one/loginstaff.asp?site=SITENAME.com
+SITENAME.COM/admin
+SITENAME.COM/login
+SITENAME.COM/login.asp
+SITENAME.COM/sign
+SITENAME.COM/signin</textarea>
+                    </li>
+                    <li>
+                        <h3>Replace
+                            <cd>{{PutCharset}}</cd> with below link:
+                            <h3>
+                                <textarea spellcheck="false" readonly>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" /></textarea>
+                    </li>
+                    <li>
+                        <h3>Remove below link:</h3>
+
+                        <textarea spellcheck="false" readonly><script type="text/javascript" language="javascript" src="{{PutHName}}{{PutTFolder}}.js?v=9.000009"></script></textarea>
+                    </li>
+
+                    <li>
+                        <h3>Replace
+                            <cd>{{PutHName}}</cd> with
+                            <cd>{{PutDomain}}</cd>, please remove slash
+                            <cd>/</cd> after
+                            <cd>{{PutDomain}}</cd>
+                        </h3>
+                    </li>
+                    <!-- <li>
+                        <h3> Replace
+                            <cd>/</cd> with
+                            <cd>/lib/</cd> only under header command files </h3>
+                    </li> -->
+                    <li>
+                        <h3> Add below link just below the
+                            <fd>custom.css</fd> in Free Layout.
+                        </h3>
+
+                        <textarea spellcheck="false" readonly>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}lib/iframeResizer.min.js"></script></textarea>
+                    </li>
+
+                    <li>
+                        <h3>Add below link below the
+                            <fd>hostmane.js</fd> in Free Layout.
+                        </h3>
+                        <textarea spellcheck="false" readonly>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}settings.js?v=9.000009"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}articles.js?v=9.000009"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}ads.js?v=9.000009"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}menus.js?v=9.000009"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}sections.js?v=9.000009"></script>
+<script type="text/javascript" language="javascript" src="{{PutDomain}}polls.js?v=9.000009"></script></textarea>
+                    </li>
+
+                    <li>
+                        <h3>Update index and review the view-source: make sure all the links are working.</h3>
+                    </li>
+                    <li>
+                        <h3>Now, Create new user and submit Article, Ad, Menu, Poll, etc. for changes to take effect. </h3>
+                    </li>
+                    <li>
+                        <h3>Add below 2 links in
+                            <ff>Default Layout</ff>'s Form area</h3>
+
+                        <textarea spellcheck="false" readonly>
+<link type="text/css" rel="stylesheet" href="{{PutDomain}}custom.css?v=9.000009">
+<script src="{{PutAppServer}}iframe-resizer-master/js/iframeResizer.contentWindow.js"></script></textarea>
+                    </li>
+                    <li>
+                        <h3>Full Link is required for images. Make sure to add
+                            <cd>{{MakeFullLinks:Yes}}</cd> command all layouts. If command will not work, then contact Adnan as it will also create JS errors in hostname.js</h3>
+                    </li>
+                    <li>
+                        <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>Make sure to change website URL in place
+                            of "SITENAME.COM"</h3>
+                        <textarea spellcheck="false" readonly>new member: 
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">new member</a>
+
+forgot password?: 
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a></textarea>
+                    </li>
+                    <li>
+                        <h3>"mainbody" class should be added Just after "blbodymain" DIV. See below: <br>
+                            <img src="https://raw.githubusercontent.com/githubbyad/Files/main/tdst.png">
+                        </h3> <br>
+                    </li>
+                    <li>
+                        <h3>Check if current client site is using
+                            <ff>LIVE BUILDER</ff> or not. If yes, then place below JS code in
+                            <ff>SM Fields (JS file)</ff> field under
+                            <ff>Settings-Staff</ff>. If old code was there, then remove that code first.<br>
+                            <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.js" target="_blank">SM Fields (JS file)</a><br><br> Place below CSS code in "SM Fields (CSS file)" field under "Settings-Staff". If old
+                            code was there, then remove that code first.<br>
+                            <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.css" target="_blank">SM Fields (CSS file)</a>
+                        </h3> <br>
+                    </li>
+                    <li>
+                        <h3>We have demo sites having top links such as Contact Us", "Login", etc. We will now have new link for these Forms. Set below URL as for link.<br>
+                            <textarea spellcheck="false" readonly>https://SITENAME.COM/index0.htm?twindow=Form&smenu=115&pform=FORMNAME&mad=No&sname=target_form2.asp&site=SITENAME.COM&as=https://bulletlink.one</textarea> <br><br>
+                            <txt>Where, SITENAME.COM is the website URL and FORMNAME is the form name such as "ContactUs", {{Login}}</txt>
+                        </h3> <br>
+                    </li>
+                    <li>
+                        <h3>Move links from
+                            <cd>target_form.asp</cd> to
+                            <cd>target_form2.asp</cd>
+
+                            <txt>Zaid: Please provide us this step in detail. We are using same "Forms" icon for all kind of forms.</txt>
+                        </h3>
+                    </li>
+
+                    <li>
+                        <h3>We have set JS and CSS to restrict folder sites earlier. However, we will not face such issue on new server.<br>So we will remove these changes. Follow the below steps:
+                            <Br> <br>- Remove below CSS from custom.css<br> <textarea spellcheck="false" readonly style="height: 27px !important;">.blbodymain {visibility: hidden;}</textarea>
+                            <br><br>- Remove below JS from custom.js<br>
+                            <textarea spellcheck="false" readonly>// BEGIN: Restrict Demo Domain
+
+$(document).ready(function () {
+var url2 = location.href.split('/');
+var lurl2 = url2[url2.length - 2];
+if (lurl2.indexOf('.') === - 1) {
+if ($(location).attr('hostname') != 'bulletlink.com') {
+window.open('/', '_top');
+}
+else {
+$('.blbodymain').css('visibility', 'visible');
+}
+}
+else {
+$('.blbodymain').css('visibility', 'visible');
+}
+});
+
+// END: Restrict Demo Domain</textarea>
+                        </h3> <br>
+                    </li>
+                    <li>
+                        <h3>Need to remove following commands from form layout:<br>
+
+                            <cd>{{SSLSecurityValue:*}}</cd><br> New form command:<br>
+
+                            <cd>{{FieldRequiredBrowser}}</cd> -> This will print required OR blank<br><br> Example:
+
+                            <br>
+
+                            <textarea spellcheck="false" readonly style="height: 27px !important;"><input type="text" id="username" name="username" {{FieldRequiredBrowser}} ></textarea><br> Will print the following if required flag is set to Yes:<br>
+
+                            <textarea spellcheck="false" readonly style="height: 27px !important;"><input type="text" id="username" name="username" required></textarea>
+                            <txt>Take final form code from <a href="https://bulletlink.one/loginstaff.asp?site=newspaperpal.com" target="_blank">newspaperpal.com</a> and apply css as per client sites.</txt>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            Look for
+                            <cd>{{ElseIf FieldType=Date}}</cd> in Form Layout under
+                            <ff>Default Layout</ff> and remove
+                            <txt>onkeypress="return false;" readonly</txt> from the
+                            <cd>
+                                INPUT
+                            </cd> code. See below screeshot,
+                            <Br>
+                            <img src="https://raw.githubusercontent.com/githubbyad/Files/main/date_new.png">
+
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>Make sure to remove the following commands from ALL layouts:<br>
+
+                            <cd> {{PutHName}}<br>{{PutTFolder}}<br>{{PutHExt}}<br>{{Http}}</cd>
+                        </h3>
+                    </li>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky">To Add or Modify steps, please contact <a title="Send Email" href="mailto:adnanisab7@gmail.com?subject=Server Migration - Instrcutions">Adnan</a></div>
+</body>
+
+</html>
