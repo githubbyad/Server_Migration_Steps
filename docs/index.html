@@ -316,10 +316,21 @@ $('.blbodymain').css('visibility', 'visible');
 
                             <cd>{{SSLSecurityValue:*}}</cd><br> New form command:<br>
 
-                            <cd>{{FieldRequiredBrowser}}</cd> -> This will print required OR blank<br>
+                            <cd>{{FieldRequiredBrowser}}</cd> -> This will print required OR blank<br><br> Example:
+
+                            <br>
+
+                            <textarea spellcheck="false" readonly style="height: 27px !important;"><input type="text" id="username" name="username" {{FieldRequiredBrowser}} ></textarea><br> Will print the following if required flag is set to Yes:<br>
+
+                            <textarea spellcheck="false" readonly style="height: 27px !important;"><input type="text" id="username" name="username" required></textarea>
                             <txt>Take final form code from <a href="https://bulletlink.one/loginstaff.asp?site=newspaperpal.com" target="_blank">newspaperpal.com</a> and apply css as per client sites.</txt>
                         </h3>
+                        <li>
+                            <h3>Make sure to remove the following commands from ALL layouts:<br>
 
+                                <cd> {{PutHName}}<br>{{PutTFolder}}<br>{{PutHExt}}<br>{{Http}}</cd>
+                            </h3>
+                        </li>
                     </li>
                 </ol>
             </div>
