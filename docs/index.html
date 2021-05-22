@@ -234,6 +234,13 @@
             color: #c444c4;
         }
         
+        ss {
+            background: yellow;
+            color: red;
+            font-style: italic;
+            padding: 0 5px;
+        }
+        
         txt {
             color: black;
             font-size: 14px;
@@ -259,7 +266,8 @@ SITENAME.COM/signin</textarea>
                     </li>
                     <li>
                         <h3>Replace
-                            <cd>{{PutCharset}}</cd> with below link:
+                            <cd>{{PutCharset}}</cd> with below links:<br>
+                            <ss>(System updated, be sure to review)</ss>
                             <h3>
                                 <textarea spellcheck="false" readonly>
 <meta charset="UTF-8">
@@ -269,7 +277,8 @@ SITENAME.COM/signin</textarea>
                     </li>
                     <li>
                         <h3>Remove below link from
-                            <ff>Free Layout</ff>
+                            <ff>Free Layout</ff><br>
+                            <ss>(System updated, be sure to review)</ss>
                         </h3>
 
                         <textarea spellcheck="false" readonly style="height: 27px !important;"><script type="text/javascript" language="javascript" src="{{PutHName}}{{PutTFolder}}.js?v=9.000009"></script></textarea> <br>
@@ -288,7 +297,8 @@ SITENAME.COM/signin</textarea>
                             <cd>{{PutHName}}</cd> with
                             <cd>{{PutDomain}}</cd>, please remove slash
                             <cd>/</cd> after
-                            <cd>{{PutDomain}}</cd>. See below screenshot,<br>
+                            <cd>{{PutDomain}}</cd>. <br>
+                            <ss>(System updated, be sure to review)</ss><br>See below screenshot,<br>
                             <img src="https://raw.githubusercontent.com/githubbyad/Files/main/codex.png">
                         </h3>
                     </li>
@@ -299,7 +309,8 @@ SITENAME.COM/signin</textarea>
                     </li> -->
                     <li>
                         <h3> Add below link just below the
-                            <fd>custom.css</fd> in Free Layout.
+                            <fd>custom.css</fd> in Free Layout.<br>
+                            <ss>(System updated, be sure to review)</ss>
                         </h3>
 
                         <textarea spellcheck="false" readonly>
@@ -312,13 +323,15 @@ SITENAME.COM/signin</textarea>
                     <li>
                         <h3>Now, Create new user and submit Article, Ad, Menu, Poll, etc. for changes to take effect. </h3>
                     </li>
-                    <li>
+                    <!-- <li>
                         <h3>Full Link is required for images. Make sure to submit article to see the updated path, it should be full path. If not showing, make sure to review in another browser.<br>Still if not worked, then make sure to add
                             <cd>{{MakeFullLinks:Yes}}</cd> command that layouts If command will not work, then contact Adnan as it will also create JS errors in hostname.js</h3>
-                    </li>
+                    </li> -->
                     <li>
                         <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>Make sure to change website URL in place
-                            of "SITENAME.COM"</h3>
+                            of "SITENAME.COM"<br>
+                            <ss>(System updated, be sure to review)</ss>
+                        </h3>
                         <textarea spellcheck="false" readonly>new member: 
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">new member</a>
 
@@ -387,7 +400,9 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>Add below 5 links in
-                            <ff>Default Layout</ff>'s Form area</h3>
+                            <ff>Default Layout</ff>'s Form area<br>
+                            <ss>(System updated, be sure to review)</ss>
+                        </h3>
 
                         <textarea spellcheck="false" readonly>
 <script type="text/javascript" language="javascript" src="{{PutDomain}}lib/JQuery/jquery.js"></script>
@@ -429,8 +444,12 @@ $('.blbodymain').css('visibility', 'visible');
                     <li>
                         <h3>Make sure to remove the following commands from ALL layouts:<br>
 
-                            <cd> {{PutHName}}<br>{{PutTFolder}}<br>{{PutHExt}}<br>{{Http}}</cd>
+                            <cd> {{PutHName}}<br>{{PutTFolder}}<br>{{PutHExt}}<br>{{Http}}</cd><br>
+                            <cd>{{MakeFullLinks:Yes}}</cd>
                         </h3>
+                    </li>
+                    <li>
+                        <h3>If there are Short URLs, be sure to submit one record under Short URLs.</h3>
                     </li>
                     </li>
                 </ol>
