@@ -197,7 +197,7 @@
         
         fd,
         ff {
-            color: red;
+            color: #4285f4;
         }
         
         lf {
@@ -239,6 +239,19 @@
             color: red;
             font-style: italic;
             padding: 0 5px;
+            animation: sys infinite 1s;
+        }
+        
+        @keyframes sys {
+            0% {
+                background-color: yellow;
+            }
+            50% {
+                background-color: white;
+            }
+            100% {
+                background-color: yellow;
+            }
         }
         
         txt {
