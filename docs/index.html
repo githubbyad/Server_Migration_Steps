@@ -466,6 +466,20 @@ $('.blbodymain').css('visibility', 'visible');
                     <li>
                         <h3>If there are Short URLs, be sure to submit one record under Short URLs.</h3>
                     </li>
+                    <li>
+                        <h3>
+                            <ff>Menu Layout</ff>: The double quote issue is fixed by removing " from layout.<br> Before:
+
+                            <br>
+
+                            <textarea spellcheck="false" readonly style="height: 27px !important;"><a href="{{SubMenuLink}}"</textarea> <br> After:
+
+                            <br>
+
+                            <textarea spellcheck="false" readonly style="height: 27px !important;"><a href={{SubMenuLink}} </textarea><br>
+
+                        </h3>
+                    </li>
                     </li>
                 </ol>
             </div>
