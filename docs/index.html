@@ -271,7 +271,9 @@
                 <ol>
 
                     <li>
-                        <h3>Login link:<br>Make sure to change website URL in place of "SITENAME.COM"</h3>
+                        <h3>Login link:<br>
+                            <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt>
+                        </h3>
                         <textarea spellcheck="false" readonly>https://bulletlink.one/loginstaff.asp?site=SITENAME.com
 SITENAME.COM/admin
 SITENAME.COM/login
@@ -343,8 +345,8 @@ SITENAME.COM/signin</textarea>
                             <cd>{{MakeFullLinks:Yes}}</cd> command that layouts If command will not work, then contact Adnan as it will also create JS errors in hostname.js</h3>
                     </li> -->
                     <li>
-                        <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>Make sure to change website URL in place
-                            of "SITENAME.COM"<br>
+                        <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
+                            <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt><br>
                             <ss>(System updated, be sure to review)</ss>
                         </h3>
                         <textarea spellcheck="false" readonly>new member: 
@@ -480,9 +482,31 @@ $('.blbodymain').css('visibility', 'visible');
 
                         </h3>
                     </li>
-                           <li><h3><ff>Hit Counter</ff>: If a site having hit counter, be sure to add one and apply proper font size and colors as per site design.<br><br>
-
-See example site: westsacweb.com</h3></li>
+                    <li>
+                        <h3>
+                            <ff>Hit Counter</ff>: If a site having hit counter, be sure to add one and apply proper font size and colors as per site design.<br><br> See example site: westsacweb.com<br><br> Code:
+                            <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt>
+                            <br><textarea spellcheck="false" readonly style="height: 27px !important;">object class="hit_sc_object" type="text/html" data="https://bulletlink.one/get_sc.asp?site=SITENAME.COM"></object></textarea><br><br> CSS:
+                            <br><textarea spellcheck="false" readonly>/* BEGIN: Hit Counter */
+.hit_sc_object {
+        height:30px;
+        overflow:hidden;
+}
+.hit_sc {
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+    height: 20px !important;
+    line-height: 20px !important;
+    width: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+/* END: Hit Counter */</textarea></h3>
+                    </li>
                     </li>
                 </ol>
             </div>
