@@ -446,6 +446,15 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>
+                            We have few sites where form area is too small and fields are showing cut from right side.<br>For that, we need to place CSS in
+                            <fd>custom.css</fd> <br>
+                            <textarea spellcheck="false" readonly>.custom-form .input input, .custom-form .select select, .custom-form .textarea textarea, .input, .select, .custom-form .label, .formdivider.formdivider_custom {
+    width: 100%;
+}</textarea>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
                             Look for
                             <cd>{{ElseIf FieldType=Date}}</cd> in Form Layout under
                             <ff>Default Layout</ff> and remove
