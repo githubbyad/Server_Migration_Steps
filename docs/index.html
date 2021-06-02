@@ -320,6 +320,10 @@
                 left: 100px
             }
         }
+        
+        fl {
+            color: #ca001c;
+        }
     </style>
 </head>
 
@@ -327,10 +331,19 @@
     <dmt>Server Migration - Instructions</dmt><br>
     <div class="wrap">
         <div class="wrap_innner">
+            <div class="quick_links">
+                Quick Links:
+                <h3>
+                    <a href="#login_link">Login Link</a>
+                    <a href="#bcc">Basic Command Changes</a>
+                    <a href="#links">Required link for Form Height</a>
+                    <a href="#req_class">Required Class</a>
+                </h3>
+            </div>
             <div class="wrap_innner2">
                 <ol>
 
-                    <li>
+                    <li id="login_link">
                         <h3>
                             <hh>Login link</hh><br>
                             <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt>
@@ -370,7 +383,7 @@ SITENAME.COM/signin</textarea>
 <script type="text/javascript" language="javascript" src="{{PutDomain}}polls.js?v=9.000009"></script></textarea>
                     </li>
 
-                    <li>
+                    <li id="bcc">
                         <h3>
                             <hh>Basic Command Changes</hh>Replace
                             <cd>{{PutHName}}</cd> with
@@ -386,7 +399,7 @@ SITENAME.COM/signin</textarea>
                             <cd>/</cd> with
                             <cd>/lib/</cd> only under header command files </h3>
                     </li> -->
-                    <li>
+                    <li id="links">
                         <h3>
                             <hh>Required link for Form Height</hh>Add below link just below the
                             <fd>custom.css</fd> in Free Layout.<br>
@@ -420,7 +433,7 @@ SITENAME.COM/signin</textarea>
 forgot password?: 
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a></textarea>
                     </li>
-                    <li>
+                    <li id="req_class">
                         <h3>
                             <hh>Required Class</hh>"mainbody" class should be added inside "blbodymain" DIV.<br>See below: <br>
                             <img src="https://raw.githubusercontent.com/githubbyad/Files/main/tdst.png">
@@ -591,7 +604,9 @@ $('.blbodymain').css('visibility', 'visible');
                             <cd>{{PutSiteMap}}</cd> we will provide sitemap.xml only if client requests. Here two site maps and most likely client may want article site map. <br>a) Below are the menu's sitemap file and layout. <i>[Make sure to change site URL in <mh>loc</mh> tag]</i><br>                            &nbsp; &nbsp; &nbsp; <a href="https://emcgazette.com/clients/emcgazette/sitemap.xml" target="_blank">https://emcgazette.com/clients/emcgazette/sitemap.xml</a><br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt"
                                 target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt</a><br>b) Below are the article's sitemap file and layout code. <i>[Make sure to change site title in <mh>news:name</mh> tag]</i><br>&nbsp;
                             &nbsp; &nbsp; <a href="https://sacobaynews.com/sitemap.xml" target="_blank">https://sacobaynews.com/sitemap.xml</a>
-                            <br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt" target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt</a>
+                            <br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt" target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt</a><br><br>
+                            <txt><i>Make sure to set <fl>Unicode URLs = No</fl> in
+                                <ff>Settings-Staff</ff> and then update pages. This will fix URL issue when we use symbolic text in article heading.</i></txt>
                         </h3>
                     </li>
                     </li>
