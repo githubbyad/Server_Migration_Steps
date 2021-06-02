@@ -260,6 +260,18 @@
             color: black;
             font-size: 14px;
         }
+        
+        mh {
+            color: #8c101b;
+        }
+        
+        mh:after {
+            content: ">";
+        }
+        
+        mh:before {
+            content: "<";
+        }
     </style>
 </head>
 
@@ -493,10 +505,7 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>
-                            <ff>Hit Counter</ff>: If a site having hit counter, be sure to add one and apply proper font size and colors as per site design.<br>See example site: westsacweb.com<br>Code:
-                            <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt>
-                            <br><textarea spellcheck="false" readonly style="height: 27px !important;"><object class="hit_sc_object" type="text/html" data="https://bulletlink.one/get_sc.asp?site=SITENAME.COM"></object></textarea><br>
-                            <Br><br>CSS:
+                            <ff>Hit Counter</ff>: If a site having hit counter, be sure to add below CSS and change style as per website.<br>See example site: westsacweb.com<br>CSS:
                             <br><textarea spellcheck="false" readonly>/* BEGIN: Hit Counter */
 .hit_sc_object {
         height:30px;
@@ -516,6 +525,15 @@ $('.blbodymain').css('visibility', 'visible');
     padding: 0;
 }
 /* END: Hit Counter */</textarea></h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <ff>SITEMAP: </ff>Remove sitemap.asp link
+                            <cd>{{PutSiteMap}}</cd> we will provide sitemap.xml only if client requests. Here two site maps and most likely client may want article site map. <br>a) Below are the menu's sitemap file and layout. <i>[Make sure to change site URL in <mh>loc</mh> tag]</i><br>                            &nbsp; &nbsp; &nbsp; <a href="https://emcgazette.com/clients/emcgazette/sitemap.xml" target="_blank">https://emcgazette.com/clients/emcgazette/sitemap.xml</a><br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt"
+                                target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt</a><br>b) Below are the article's sitemap file and layout code. <i>[Make sure to change site title in <mh>news:name</mh> tag]</i><br>&nbsp;
+                            &nbsp; &nbsp; <a href="https://sacobaynews.com/sitemap.xml" target="_blank">https://sacobaynews.com/sitemap.xml</a>
+                            <br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt" target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt</a>
+                        </h3>
                     </li>
                     </li>
                 </ol>
