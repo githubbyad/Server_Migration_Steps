@@ -324,10 +324,105 @@
         fl {
             color: #ca001c;
         }
+        
+        .quick_links {
+            background: #c9ccc9;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        
+        .quick_links {
+            color: black;
+            font-weight: bold;
+        }
+        
+        .quick_links a {
+            text-decoration: navajowhite;
+            background: #777;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            color: white;
+            transition: 200ms linear;
+        }
+        
+        .quick_links a:hover {
+            background: black;
+            transition: 300ms linear;
+        }
+        
+        .quick_links a {
+            display: flex;
+            float: left;
+            font-size: 13px;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .quick_links h3 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .top_go img {
+            width: 60px;
+            position: fixed;
+            bottom: 25px;
+            right: 0;
+        }
+        
+        .top_go {
+            position: fixed;
+            bottom: 20px;
+            right: 0;
+            z-index: 9999;
+        }
+        
+        .quick_links h3 {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        
+        li:hover {
+            border-color: #6f12cc;
+        }
+        
+        li:hover::marker {
+            color: #6f12cc;
+        }
+        
+        li h3 a,
+        li h3 a:visited,
+        li a {
+            color: blue !important;
+            font-size: 13px;
+        }
+        
+        #sitemap {}
+        
+        .button {
+            color: white !important;
+            font-weight: bold;
+        }
+        
+        nt {
+            background: black;
+            color: white;
+            padding: 0 10px;
+            border-radius: 5px;
+            line-height: 24px;
+            display: inline-block;
+            margin-right: 5px;
+            font-weight: normal;
+        }
     </style>
 </head>
 
 <body>
+    <a class="top_go" href="#" title="Go to Top"><img src="https://media0.giphy.com/media/jQOs1usF8FkpgTe7AA/source.gif"></a>
     <dmt>Server Migration - Instructions</dmt><br>
     <div class="wrap">
         <div class="wrap_innner">
@@ -337,7 +432,21 @@
                     <a href="#login_link">Login Link</a>
                     <a href="#bcc">Basic Command Changes</a>
                     <a href="#links">Required link for Form Height</a>
+                    <a href="#login_form">Login Form</a>
                     <a href="#req_class">Required Class</a>
+
+                    <a href="#lb">LIVE BUILDER</a>
+                    <a href="#uused">Unused Code on new Server</a>
+                    <a href="#form_layout">Form Layout</a>
+                    <a href="#form_width">Form Width Issue</a>
+                    <a href="#date_field">Date Field</a>
+                    <a href="#short_url">Short URL</a>
+                    <a href="#menu_layout">Menu Layout</a>
+                    <a href="#hit_counter">Hit Counter</a>
+                    <a href="#sitemap">Sitemap</a>
+
+
+
                 </h3>
             </div>
             <div class="wrap_innner2">
@@ -420,7 +529,7 @@ SITENAME.COM/signin</textarea>
                         <h3>Full Link is required for images. Make sure to submit article to see the updated path, it should be full path. If not showing, make sure to review in another browser.<br>Still if not worked, then make sure to add
                             <cd>{{MakeFullLinks:Yes}}</cd> command that layouts If command will not work, then contact Adnan as it will also create JS errors in hostname.js</h3>
                     </li> -->
-                    <li>
+                    <li id="login_form">
                         <h3>
                             <hh>LOGIN form</hh>Visit
                             <ff>Login</ff> page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
@@ -439,7 +548,7 @@ forgot password?:
                             <img src="https://raw.githubusercontent.com/githubbyad/Files/main/tdst.png">
                         </h3> <br>
                     </li>
-                    <li>
+                    <li id="lb">
                         <h3>
                             <hh>LIVE BUILDER</hh>Check if current client site is having
                             <ff>LIVE BUILDER</ff> or not. If yes, then follow the below two steps:<br><br>
@@ -470,7 +579,7 @@ forgot password?:
                         </h3>
                     </li>
 
-                    <li>
+                    <li id="uused">
                         <h3>
                             <hh>Unused Code on new Server</hh>We have set JS and CSS to restrict folder sites earlier. However, we will not face such issue on new server.<br>So we will remove these changes. Follow the below steps:
                             <Br> <br>- Remove below CSS from custom.css<br> <textarea spellcheck="false" readonly style="height: 27px !important;">.blbodymain {visibility: hidden;}</textarea>
@@ -496,7 +605,7 @@ $('.blbodymain').css('visibility', 'visible');
 // END: Restrict Demo Domain</textarea>
                         </h3> <br>
                     </li>
-                    <li>
+                    <li id="form_layout">
                         <h3>
                             <hh>Form Layout</hh>Add below 5 links in
                             <ff>Default Layout</ff>'s Form area<br>
@@ -526,7 +635,7 @@ $('.blbodymain').css('visibility', 'visible');
                             <txt>Take final form code from <a href="https://bulletlink.one/loginstaff.asp?site=newspaperpal.com" target="_blank">newspaperpal.com</a> and apply css as per client sites.</txt>
                         </h3>
                     </li>
-                    <li>
+                    <li id="form_width">
                         <h3>
                             <hh>Form Width Issue</hh>We have few sites where form area is too small and fields are showing cut from right side.<br>For that, we need to place CSS in
                             <fd>custom.css</fd> <br>
@@ -535,7 +644,7 @@ $('.blbodymain').css('visibility', 'visible');
 }</textarea>
                         </h3>
                     </li>
-                    <li>
+                    <li id="date_field">
                         <h3>
                             <hh>Date Field</hh>
                             Look for
@@ -557,13 +666,13 @@ $('.blbodymain').css('visibility', 'visible');
                             <cd>{{MakeFullLinks:Yes}}</cd>
                         </h3>
                     </li>
-                    <li>
+                    <li id="short_url">
                         <h3>
                             <hh>Short URL</hh>If there are Short URLs, be sure to submit one record under Short URLs.</h3>
                     </li>
-                    <li>
+                    <li id="menu_layout">
                         <h3>
-                            <ff>Menu Layout</ff>: The double quote issue is fixed by removing " from layout.<br> Before:
+                            <hh>Menu Layout</hh>: The double quote issue is fixed by removing " from layout.<br> Before:
 
                             <br>
 
@@ -575,7 +684,7 @@ $('.blbodymain').css('visibility', 'visible');
 
                         </h3>
                     </li>
-                    <li>
+                    <li id="hit_counter">
                         <h3>
                             <hh>Hit Counter</hh>If a site having hit counter, be sure to add below CSS and change style as per website.<br>See example site: westsacweb.com<br>CSS:
                             <br><textarea spellcheck="false" readonly>/* BEGIN: Hit Counter */
@@ -598,7 +707,7 @@ $('.blbodymain').css('visibility', 'visible');
 }
 /* END: Hit Counter */</textarea></h3>
                     </li>
-                    <li>
+                    <li id="sitemap">
                         <h3>
                             <hh>SITEMAP</hh>Remove sitemap.asp link
                             <cd>{{PutSiteMap}}</cd> we will provide sitemap.xml only if client requests. Here two site maps and most likely client may want article site map. <br>a) Below are the menu's sitemap file and layout. <i>[Make sure to change site URL in <mh>loc</mh> tag]</i><br>                            &nbsp; &nbsp; &nbsp; <a href="https://emcgazette.com/clients/emcgazette/sitemap.xml" target="_blank">https://emcgazette.com/clients/emcgazette/sitemap.xml</a><br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt"
@@ -606,7 +715,9 @@ $('.blbodymain').css('visibility', 'visible');
                             &nbsp; &nbsp; <a href="https://sacobaynews.com/sitemap.xml" target="_blank">https://sacobaynews.com/sitemap.xml</a>
                             <br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt" target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_article.txt</a><br><br>
                             <txt><i>Make sure to set <fl>Unicode URLs = No</fl> in
-                                <ff>Settings-Staff</ff> and then update pages. This will fix URL issue when we use symbolic text in article heading.</i></txt>
+                                <ff>Settings-Staff</ff> and then update pages. This will fix URL issue when we use symbolic text in article heading.</i></txt><br><br>
+                            <nt>NOTE</nt>Once its done, make sure to validate it on <a href="https://www.xmlvalidation.com/" target="_blank">www.xmlvalidation.com</a> Open source code of XML file and copy XML code to validate. See below,<br>
+                            <txt>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; view-source:https://sacobaynews.com/sitemap.xml</txt>
                         </h3>
                     </li>
                     </li>
