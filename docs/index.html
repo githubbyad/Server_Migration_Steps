@@ -272,6 +272,54 @@
         mh:before {
             content: "<";
         }
+        
+        hh::before {
+            content: "";
+            width: 5px;
+            height: 80px;
+            background: white;
+            position: absolute;
+            -webkit-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            left: 0px;
+            top: -20px;
+            animation: _8UqQ8B 1s linear 6ms infinite;
+            opacity: 0.5;
+            z-index: 2;
+        }
+        
+        hh {
+            background: #6f12cc;
+            float: left;
+            position: relative;
+            padding: 0 10px;
+            color: white;
+            border-radius: 5px;
+            margin-right: 5px;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+            overflow: hidden;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        @keyframes _8UqQ8B {
+            0% {
+                opacity: 0;
+                left: -15px
+            }
+            50% {
+                opacity: 0.45;
+                left: 45px
+            }
+            to {
+                opacity: 0;
+                left: 100px
+            }
+        }
     </style>
 </head>
 
@@ -283,7 +331,8 @@
                 <ol>
 
                     <li>
-                        <h3>Login link:<br>
+                        <h3>
+                            <hh>Login link</hh><br>
                             <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt>
                         </h3>
                         <textarea spellcheck="false" readonly>https://bulletlink.one/loginstaff.asp?site=SITENAME.com
@@ -322,7 +371,8 @@ SITENAME.COM/signin</textarea>
                     </li>
 
                     <li>
-                        <h3>Replace
+                        <h3>
+                            <hh>Basic Command Changes</hh>Replace
                             <cd>{{PutHName}}</cd> with
                             <cd>{{PutDomain}}</cd>, please remove slash
                             <cd>/</cd> after
@@ -337,7 +387,8 @@ SITENAME.COM/signin</textarea>
                             <cd>/lib/</cd> only under header command files </h3>
                     </li> -->
                     <li>
-                        <h3> Add below link just below the
+                        <h3>
+                            <hh>Required link for Form Height</hh>Add below link just below the
                             <fd>custom.css</fd> in Free Layout.<br>
                             <ss>(System updated, be sure to review)</ss>
                         </h3>
@@ -357,7 +408,9 @@ SITENAME.COM/signin</textarea>
                             <cd>{{MakeFullLinks:Yes}}</cd> command that layouts If command will not work, then contact Adnan as it will also create JS errors in hostname.js</h3>
                     </li> -->
                     <li>
-                        <h3>Visit Login page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
+                        <h3>
+                            <hh>LOGIN form</hh>Visit
+                            <ff>Login</ff> page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
                             <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt><br>
                             <ss>(System updated, be sure to review)</ss>
                         </h3>
@@ -368,12 +421,14 @@ forgot password?:
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a></textarea>
                     </li>
                     <li>
-                        <h3>"mainbody" class should be added Just after "blbodymain" DIV. See below: <br>
+                        <h3>
+                            <hh>Required Class</hh>"mainbody" class should be added Just after "blbodymain" DIV. See below: <br>
                             <img src="https://raw.githubusercontent.com/githubbyad/Files/main/tdst.png">
                         </h3> <br>
                     </li>
                     <li>
-                        <h3>Check if current client site is having
+                        <h3>
+                            <hh>LIVE BUILDER</hh>Check if current client site is having
                             <ff>LIVE BUILDER</ff> or not. If yes, then follow the below two steps:<br>
                             <stp>A</stp> Place below JS code in
                             <ff>SM Fields (JS file)</ff> field under
@@ -403,7 +458,8 @@ forgot password?:
                     </li>
 
                     <li>
-                        <h3>We have set JS and CSS to restrict folder sites earlier. However, we will not face such issue on new server.<br>So we will remove these changes. Follow the below steps:
+                        <h3>
+                            <hh>Unused Code on new Server</hh>We have set JS and CSS to restrict folder sites earlier. However, we will not face such issue on new server.<br>So we will remove these changes. Follow the below steps:
                             <Br> <br>- Remove below CSS from custom.css<br> <textarea spellcheck="false" readonly style="height: 27px !important;">.blbodymain {visibility: hidden;}</textarea>
                             <br><br>- Remove below JS from custom.js<br>
                             <textarea spellcheck="false" readonly>// BEGIN: Restrict Demo Domain
@@ -428,7 +484,8 @@ $('.blbodymain').css('visibility', 'visible');
                         </h3> <br>
                     </li>
                     <li>
-                        <h3>Add below 5 links in
+                        <h3>
+                            <hh>Form Layout</hh>Add below 5 links in
                             <ff>Default Layout</ff>'s Form area<br>
                             <ss>(System updated, be sure to review)</ss>
                         </h3>
@@ -458,7 +515,7 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>
-                            We have few sites where form area is too small and fields are showing cut from right side.<br>For that, we need to place CSS in
+                            <hh>Form Width Issue</hh>We have few sites where form area is too small and fields are showing cut from right side.<br>For that, we need to place CSS in
                             <fd>custom.css</fd> <br>
                             <textarea spellcheck="false" readonly>.custom-form .input input, .custom-form .select select, .custom-form .textarea textarea, .input, .select, .custom-form .label, .formdivider.formdivider_custom {
     width: 100%;
@@ -467,6 +524,7 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>
+                            <hh>Date Field</hh>
                             Look for
                             <cd>{{ElseIf FieldType=Date}}</cd> in Form Layout under
                             <ff>Default Layout</ff> and remove
@@ -487,7 +545,8 @@ $('.blbodymain').css('visibility', 'visible');
                         </h3>
                     </li>
                     <li>
-                        <h3>If there are Short URLs, be sure to submit one record under Short URLs.</h3>
+                        <h3>
+                            <hh>Short URL</hh>If there are Short URLs, be sure to submit one record under Short URLs.</h3>
                     </li>
                     <li>
                         <h3>
@@ -505,7 +564,7 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>
-                            <ff>Hit Counter</ff>: If a site having hit counter, be sure to add below CSS and change style as per website.<br>See example site: westsacweb.com<br>CSS:
+                            <hh>Hit Counter</hh>If a site having hit counter, be sure to add below CSS and change style as per website.<br>See example site: westsacweb.com<br>CSS:
                             <br><textarea spellcheck="false" readonly>/* BEGIN: Hit Counter */
 .hit_sc_object {
         height:30px;
@@ -528,7 +587,7 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li>
                         <h3>
-                            <ff>SITEMAP: </ff>Remove sitemap.asp link
+                            <hh>SITEMAP</hh>Remove sitemap.asp link
                             <cd>{{PutSiteMap}}</cd> we will provide sitemap.xml only if client requests. Here two site maps and most likely client may want article site map. <br>a) Below are the menu's sitemap file and layout. <i>[Make sure to change site URL in <mh>loc</mh> tag]</i><br>                            &nbsp; &nbsp; &nbsp; <a href="https://emcgazette.com/clients/emcgazette/sitemap.xml" target="_blank">https://emcgazette.com/clients/emcgazette/sitemap.xml</a><br>&nbsp; &nbsp; &nbsp; <a href="https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt"
                                 target="_blank">https://raw.githubusercontent.com/githubbyad/Files/main/sitemap_menu.txt</a><br>b) Below are the article's sitemap file and layout code. <i>[Make sure to change site title in <mh>news:name</mh> tag]</i><br>&nbsp;
                             &nbsp; &nbsp; <a href="https://sacobaynews.com/sitemap.xml" target="_blank">https://sacobaynews.com/sitemap.xml</a>
