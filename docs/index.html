@@ -418,6 +418,14 @@
             margin-right: 5px;
             font-weight: normal;
         }
+        
+        textarea {
+            background: #1e1e1e;
+            color: #68cdfe;
+            padding: 5px;
+            box-sizing: border-box;
+            border-width: 0;
+        }
     </style>
 </head>
 
@@ -447,6 +455,7 @@
                     <a href="#old_search">Old Search</a>
                     <a href="#pages">Pages Update</a>
                     <a href="#Theme">Site Manager Theme</a>
+                    <a href="#article_popup">Article Popup</a>
 
 
 
@@ -743,6 +752,17 @@ $('.blbodymain').css('visibility', 'visible');
                             <hh>Site Manager Theme</hh>Site Manager theme is not applying and it shows white background like below.<br>
                             <img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;" src="https://raw.githubusercontent.com/githubbyad/Files/main/white_sm.png"><br> Submit "Settings" OR "Settings-Staff"
                             screen to fix this issue.</h3>
+                    </li>
+                    <li id="article_popup">
+                        <h3>
+                            <hh>Article Popup</hh>On new server, Mobile page's URL has been changed and so we need to make that changes in site having
+                            <mh>Template#111</mh> design.<br><br>Open Layouts, Section Layout and Previews(<i>if added</i>) and look for below attribue in "A" tags.
+                            <textarea spellcheck="false" readonly style="height: 27px;">onClick="OpenPopup4('/mdetail.asp?pop=Y&hn={{HostName}}&he={{HostExt}}&l={{HeadingLink}}','iframe');"</textarea><br><br>Change this attrubute to below correct one,
+                            <textarea spellcheck="false" readonly style="height: 27px;">onClick="OpenPopup4('{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}','iframe');"</textarea><br><br><br>
+                            <txt>
+                                <nt>NOTE</nt><i>Site reference: <a href="https://glendaledailyplanet.com" target="_blank">glendaledailyplanet.com</a></i></txt>
+
+                        </h3>
                     </li>
                     </li>
                 </ol>
