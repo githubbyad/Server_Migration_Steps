@@ -458,6 +458,7 @@
                     <a href="#old_search">Old Search</a>
                     <a href="#pages">Pages Update</a>
                     <a href="#article_popup">Article Popup</a>
+                    <a href="#mobile">Mobile m.htm Page</a>
                     <a href="#Theme">Site Manager Theme</a>
 
 
@@ -757,13 +758,21 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li id="article_popup">
                         <h3>
-                            <hh>Article Popup</hh>On new server, Mobile page's URL has been changed and so we need to make that changes in site having
+                            <hh>Article Popup</hh>On new server, Mobile article's URL has been changed and so we need to make that changes in site having
                             <mht>Template#111</mht> design.<br><br>Open Layouts, Section Layout and Previews(<i>if added</i>) and look for below attribue in "A" tags.
                             <textarea spellcheck="false" readonly style="height: 27px;">onClick="OpenPopup4('/mdetail.asp?pop=Y&hn={{HostName}}&he={{HostExt}}&l={{HeadingLink}}','iframe');"</textarea><br><br>Change this attrubute to below correct one,
                             <textarea spellcheck="false" readonly style="height: 27px;">onClick="OpenPopup4('{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}','iframe');"</textarea><br><br><br>
                             <txt>
                                 <nt>NOTE</nt><i>Site reference: <a href="https://glendaledailyplanet.com" target="_blank">glendaledailyplanet.com</a></i></txt>
 
+                        </h3>
+                    </li>
+                    <li id="mobile">
+                        <h3>
+                            <hh>Mobile m.htm Page</hh>One new server, Mobile article's URL has beend changed and we need to change that manually in Mobile layout. Please look for mobile's layout, you can search as "ArticleGroup12" or "GetMobileArticles()"
+                            and replace<br>
+                            <cd>{{PutHName}}</cd><br>with<br>
+                            <cd>{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}</cd><br>See below screenshot,<br><img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;" src="https://raw.githubusercontent.com/githubbyad/Files/main/m_htm.png">
                         </h3>
                     </li>
                     <li id="Theme">
