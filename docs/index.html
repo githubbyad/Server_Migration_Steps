@@ -738,7 +738,7 @@ $('.blbodymain').css('visibility', 'visible');
                             <br> b) After generating code, make below changes in that code.<br> &nbsp; &nbsp; &nbsp; - Remove URL from "href". Set href="#"<br> &nbsp; &nbsp; &nbsp; - Remove "target" attribute<br> c) Once it's done, place code in
                             <ff>Free Layout</ff>.
                             <br> d) Place below CSS to style this hit counter. Make changes in this CSS as per website theme.<br>
-                            <textarea spellcheck="false" readonly>/* BEGIN: Hit Counter */
+                            <textarea spellcheck="false" readonly style="width: 88%;margin-right: 10%;margin-left:2%">/* BEGIN: Hit Counter */
 a.hitCounter::before {
     content: "You are visitor: ";
 }                                
@@ -750,8 +750,15 @@ a.hitCounter {
     font-size: 16px !important;
 }
 /* END: Hit Counter */                        
-                        </textarea>
-                        </h3>
+                        </textarea><br>e) Place below JS in
+                            <fd>custom.js</fd>, this will add comas between numbers:<br>
+                            <textarea spellcheck="false" readonly style="width: 88%;margin-right: 10%;margin-left:2%">
+// BEGIN: Hit Counter
+$(window).bind('load', function() {
+    $('a.hitCounter').html($('a.hitCounter').html().toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"));
+}); 
+// END: Hit Counter                       
+</textarea> </h3>
                     </li>
                     <li id="sitemap">
                         <h3>
