@@ -736,32 +736,57 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>-->
                     <li id="hit_counter">
                         <h3>
-                            <hh>Hit Counter</hh>If a site having hit counter, be sure to follow below steps.<br> a) Visit <a href="https://smallseotools.com/visitor-hit-counter/" target="_blank">Hit Counter</a> site and generate code as per below screenshot.<br>                            &nbsp; &nbsp; &nbsp; <img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;" src="https://raw.githubusercontent.com/githubbyad/Files/main/hitc2.png">
-                            <br> b) After generating code, make below changes in that code.<br> &nbsp; &nbsp; &nbsp; - Remove URL from "href". Set href="#"<br> &nbsp; &nbsp; &nbsp; - Remove "target" attribute<br> c) Once it's done, place code in
-                            <ff>Free Layout</ff>.
-                            <br> d) Place below CSS to style this hit counter. Make changes in this CSS as per website theme.<br>
-                            <textarea spellcheck="false" readonly style="width: 88%;margin-right: 10%;margin-left:2%">/* BEGIN: Hit Counter */
-a.hitCounter::before {
-    content: "You are visitor: ";
-}                                
-a.hitCounter {
-    color: black !important;
-    background: transparent !important;
-    min-width: auto !important;
-    padding: 0 !important;
-    font-size: 16px !important;
-    pointer-events: none;
-}
-/* END: Hit Counter */                        
-                        </textarea><br>e) Place below JS in
-                            <fd>custom.js</fd>, this will add comas between numbers:<br>
-                            <textarea spellcheck="false" readonly style="width: 88%;margin-right: 10%;margin-left:2%">
-// BEGIN: Hit Counter
-$(window).bind('load', function() {
-    $('a.hitCounter').html($('a.hitCounter').html().toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,"));
-}); 
-// END: Hit Counter                       
-</textarea> </h3>
+                            <hh>Hit Counter</hh>If a site having hit counter, be sure to follow below steps.<br> 1) Visit <a href="https://www.webfreecounter.com/" target="_blank">webfreecounter.com</a> site and generate code as per below screenshot.<br>                            &nbsp; &nbsp; &nbsp; <img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;" src="https://raw.githubusercontent.com/githubbyad/Files/main/hit_cc.png">
+                            <br> 2) After generating code, just copy the "id" from URL, no need to copy the CODE. See below screenshot<br> &nbsp; &nbsp; &nbsp; <img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;"
+                                src="https://raw.githubusercontent.com/githubbyad/Files/main/hit_ccc.png"><br> 3) Once it's done, place code in "Hit Counter Code" field under
+                            <ff>Settings-Staff</ff>.<br> &nbsp; &nbsp;
+                            <nt>NOTE</nt>You will see
+                            <fl>data-hit="ABC"</fl> in below code(see first line), replace
+                            <fl>"ABC"</fl> with the hit counter "id" copied in step#2.
+                            <br> <textarea spellcheck="false" style="width: 88%;margin-right: 10%;margin-left:2%"><div class="hpe-hit" data-hit="ABC">
+    <div class="hit-wrap">
+        <span>YOU ARE VISITOR:</span>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.hit-wrap').append('<img src="https://www.webfreecounter.com/hit.php?id=' + $('.hpe-hit').attr('data-hit') + '&nd=1&style=5" >');
+    });
+</script>
+<style>
+    .hit-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hit-wrap img {
+        max-height: 17px;
+    }
+    
+    .hit-wrap span {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    
+    .hpe-hit {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: auto;
+    }
+    
+    .hit {
+        background: #eaebea;
+        width: 99%;
+        text-align: center;
+        line-height: 25px;
+        border-top: 5px solid #c6c5c0;
+        border-bottom: 5px solid #c6c5c0;
+    }
+</style></textarea>4) In
+                            <ff>Free Layout</ff>, place
+                            <cd>{{PutHitCounter}}</cd> command to show this hit counter.<br>
+                        </h3>
                     </li>
                     <li id="sitemap">
                         <h3>
