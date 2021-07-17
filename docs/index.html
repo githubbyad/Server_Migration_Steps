@@ -775,6 +775,37 @@ $('.blbodymain').css('visibility', 'visible');
         margin-bottom: 5px;
         width: auto;
     }
+</style></textarea><br>&nbsp; &nbsp; &nbsp; If above code will not work, then try below:<br><textarea spellcheck="false" style="width: 88%;margin-right: 10%;margin-left:2%"><div class="hpe-hit" data-hit="ABC">
+    <div class="hit-wrap">
+        <span>You are Visitor:</span>
+    </div>
+</div>
+<script>
+    $(window).bind('load',function() {
+        $('.hit-wrap').append('<img src="https://www.webfreecounter.com/hit.php?id=' + $('.hpe-hit').attr('data-hit') + '&nd=1&style=5" >');
+    });
+</script>
+<style>
+    .hit-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hit-wrap img {
+        max-height: 17px;
+    }
+    
+    .hit-wrap span {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    
+    .hpe-hit {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: auto;
+    }
 </style></textarea>4) In
                             <ff>Free Layout</ff>, place
                             <cd>{{PutHitCounter}}</cd> command to show this hit counter.<br>
