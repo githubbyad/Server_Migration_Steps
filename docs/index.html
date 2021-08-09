@@ -551,12 +551,14 @@ SITENAME.COM/signin</textarea>
                     </li> -->
                     <li id="login_form">
                         <h3>
-                            <hh>LOGIN form</hh>Visit
+
+                            <hh>LOGIN form</hh><br><br>
+                            <stp>A</stp> Visit
                             <ff>Login</ff> page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
                             <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt><br>
                             <ss>(System updated, be sure to review)</ss>
-                        </h3>
-                        <textarea spellcheck="false" readonly>new member: 
+
+                            <textarea spellcheck="false" readonly style="width:90%;margin-right:10%;">new member: 
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">new member</a>
 
 forgot password?: 
@@ -565,6 +567,94 @@ forgot password?:
 delete member: 
 <a href="/target_form2.asp?twindow=Form&smenu=106&pform={{DeleteMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a>
 </textarea>
+                            <br><br><br><br>
+                            <stp>B</stp> Add below JS and CSS in
+                            <ff>Form Footer</ff> file under {{Login}} form. This will show "eye" icon to see password.<br>
+                            <textarea spellcheck="false" readonly style="width:90%;margin-right:10%;">
+<script>
+// BEGIN: Show & Hide passwords
+$(document).ready(function(){
+$("input[type='password']").parent("label.input").append("<div class='open-eye'><i class='fa fa-eye' aria-hidden='true'></i></div><div class='close-eye' style='display:none;'><i class='fa fa-eye-slash' aria-hidden='true'></i></div>");
+$('.open-eye').click(function(){
+$(this).css('display','none');
+$(this).siblings('.close-eye').css('display','block');
+$(this).siblings('input').prop('type','text');
+});
+$('.close-eye').click(function(){
+$(this).css('display','none');
+$(this).siblings('.open-eye').css('display','block');
+$(this).siblings('input').prop('type','password');
+});
+});
+// END: Show & Hide passwords
+</script>
+<style>
+@media screen and (max-width: 600px) {
+.my-form {
+width: 92vw !important;
+margin-left: 2vw;
+margin-right: 2vw;
+padding: 2vw;
+}
+fieldset {
+padding: 6vw !important;
+width: 78vw !important;
+}
+.my-form .row {
+margin: auto;
+}
+.my-form .col-8 {
+margin: auto;
+}
+input[type="text"], input[type="password"] {
+width: 66vw !important;
+box-sizing: border-box !important;
+}
+.open-eye, .close-eye {
+right: 4vw;
+}
+.col.col-11 {
+width: 2vw;
+float: left;
+}
+.col.col-8 {
+width: 66vw;
+float: left;
+}
+.col.col-8 .input img {
+float: left;
+}
+}
+.open-eye, .close-eye {
+position:  absolute;
+right: 10px;
+top: 8px;
+cursor:pointer;
+}
+.open-eye {
+color:#6E6E6E;
+}
+.close-eye {
+color:#ff5050;
+}
+.open-eye i:before, .close-eye i:before {
+font-family: FontAwesome;
+font-size: 20px !important;
+font-style: normal;
+}
+.open-eye i:before {
+content: "\f06e";
+}
+.close-eye i:before {
+content: "\f070";
+}
+@media screen and (max-width: 600px) {
+.open-eye, .close-eye {
+right: 4vw;
+}
+}
+</style></textarea>
+                        </h3>
                     </li>
                     <li id="req_class">
                         <h3>
