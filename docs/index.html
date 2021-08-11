@@ -798,107 +798,23 @@ $('.blbodymain').css('visibility', 'visible');
 
                         </h3>
                     </li>
-                    <!--<li id="hit_counter">
-                        <h3>
-                            <hh>Hit Counter</hh>If a site having hit counter, be sure to add below CSS and change style as per website.<br>See example site: westsacweb.com<br>CSS:
-                            <br><textarea spellcheck="false" readonly>/* BEGIN: Hit Counter */
-.hit_sc_object {
-        height:30px;
-        overflow:hidden;
-}
-.hit_sc {
-    color: white;
-    text-align: center;
-    font-family: Arial;
-    font-size: 11px;
-    font-weight: bold;
-    height: 20px !important;
-    line-height: 20px !important;
-    width: auto;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-/* END: Hit Counter */</textarea><br><br>
-                            <txt>
-                                <nt>NOTE</nt>Once its done, make sure to clear cache using <span style="color:blue">/staff_clear_cache.asp</span> script.</txt>
-                        </h3>
-                    </li>-->
                     <li id="hit_counter">
                         <h3>
-                            <hh>Hit Counter</hh>If a site having hit counter, be sure to follow below steps.<br> 1) Visit <a href="https://www.webfreecounter.com/" target="_blank">webfreecounter.com</a> site and generate code as per below screenshot.<br>                            &nbsp; &nbsp; &nbsp; <img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;" src="https://raw.githubusercontent.com/githubbyad/Files/main/hit_cc.png">
-                            <br> 2) After generating code, just copy the "id" from URL, no need to copy the CODE. See below screenshot<br> &nbsp; &nbsp; &nbsp; <img style="max-width: 75%;border: 1px solid black;border-radius: 10px;margin-top: 10px;margin-bottom: 10px;"
-                                src="https://raw.githubusercontent.com/githubbyad/Files/main/hit_ccc.png"><br> 3) Once it's done, place code in
-                            <ff>Hit Counter Code</ff> field under
-                            <ff>Settings-Staff</ff>.<br> &nbsp; &nbsp;
-                            <nt>NOTE</nt>You will see
-                            <fl>data-hit="ABC"</fl> in below code(see first line), replace
-                            <fl>"ABC"</fl> with the hit counter "id" copied in step#2.
-                            <br> <textarea spellcheck="false" style="width: 88%;margin-right: 10%;margin-left:2%"><div class="hpe-hit" data-hit="ABC">
-    <div class="hit-wrap">
-        <span>You are Visitor:</span>
-    </div>
-</div>
-<script>
-    $(document).ready(function() {
-        $('.hit-wrap').append('<img src="https://www.webfreecounter.com/hit.php?id=' + $('.hpe-hit').attr('data-hit') + '&nd=1&style=5" >');
-    });
-</script>
-<style>
-    .hit-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .hit-wrap img {
-        max-height: 17px;
-    }
-    
-    .hit-wrap span {
-        font-size: 14px;
-        margin-right: 8px;
-    }
-    
-    .hpe-hit {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        width: auto;
-    }
-</style></textarea><br>&nbsp; &nbsp; &nbsp; If above code will not work, then try below:<br><textarea spellcheck="false" style="width: 88%;margin-right: 10%;margin-left:2%"><div class="hpe-hit" data-hit="ABC">
-    <div class="hit-wrap">
-        <span>You are Visitor:</span>
-    </div>
-</div>
-<script>
-    $(window).bind('load',function() {
-        $('.hit-wrap').append('<img src="https://www.webfreecounter.com/hit.php?id=' + $('.hpe-hit').attr('data-hit') + '&nd=1&style=5" >');
-    });
-</script>
-<style>
-    .hit-wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .hit-wrap img {
-        max-height: 17px;
-    }
-    
-    .hit-wrap span {
-        font-size: 14px;
-        margin-right: 8px;
-    }
-    
-    .hpe-hit {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        width: auto;
-    }
-</style></textarea>4) In
-                            <ff>Free Layout</ff>, place
-                            <cd>{{PutHitCounter}}</cd> command to show this hit counter.<br>
+                            <hh>Hit Counter</hh>If hit counter is showing form third-party site, then we need to change that. Below are the steps to follow. <br><br>
+                            <nt>NOTE</nt> There are two "C" steps added as we have placed different counters on some sites.<br><br>
+                            <stp>A</stp> Submit "Settings-Staff" Screen. This will update the code of the new Hit Counter.<br><br>
+                            <stp>B</stp> Now we don't have the latest counter number to set. So Open "Settings-Staff" screen and look for the "Hit Counter Code" field.<br><br>
+                            <stp>C</stp> If the the code under this field shows from "webfreecounter.com" site, then you need to open below URL,<br><br>       https://www.webfreecounter.com/hit.php?id=<span style="color:red">XYZ</span><br><br>       Where
+                            <span style="color:red">XYZ</span> is the id to get. See screenshot: <a href="https://i.snipboard.io/PhYeIt.jpg" target="_blank">https://i.snipboard.io/PhYeIt.jpg</a>
+                            <br><br>       Once you visit the site, you will get the latest counter number. Save that counter number.<br><br> OR
+
+                            <br><br>
+                            <stp>C</stp> On some sites, we have directly placed third-party code under "Free Layout". So you can get the latest number after visiting the site. Save that counter number. Now visit "Free Layout" and replace third-party code with
+                            {{PutHitCounter}} command. Make sure to take backup of third-party code.<br><br>
+                            <stp>D</stp> Now run below script and make sure to change site URL, you will see "newspaperpal.com".<br><br>       /staff_reset_site_counter.asp?site=newspaperpal.com&sm=Y
+
+                            <br><br>       Place the latest counter number and submit.<br><br>
+                            <stp>E</stp> You will see a hit counter in text format having comas. Make sure to visit all pages and flag to Mam if it requires to update pages.<br><br> In case you face any issue, please contact Adnan.
                         </h3>
                     </li>
                     <li id="sitemap">
