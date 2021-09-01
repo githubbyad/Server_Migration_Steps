@@ -147,9 +147,11 @@
             line-height: 30px;
             color: white;
         }
+        
         red {
-color: red
-}
+            color: red
+        }
+        
         body {
             margin: 0;
             padding: 0;
@@ -670,8 +672,9 @@ right: 4vw;
                             <ff>LIVE BUILDER</ff> or not. If yes, then follow the below two steps:<br><br>
                             <stp>A</stp> Place below JS code in
                             <ff>SM Fields (JS file)</ff> field under
-                            <ff>Settings-Staff</ff>. If old Live Builder code was there, then remove that code first. <br><red>Make sure to keep other code as it is which were added for other purposes.</red><br> &nbsp; &nbsp; &nbsp; &nbsp; <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.js" target="_blank">SM Fields (JS file)</a><br><br>                            Place below CSS code in "SM Fields (CSS file)" field under "Settings-Staff". If old Live Builder code was there, then remove that code first. <br><red>Make sure to keep other code as it is which were added for other purposes.</red><br> &nbsp; &nbsp; &nbsp; &nbsp; <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.css"
-                                target="_blank">SM Fields (CSS file)</a><br>
+                            <ff>Settings-Staff</ff>. If old Live Builder code was there, then remove that code first. <br>
+                            <red>Make sure to keep other code as it is which were added for other purposes.</red><br> &nbsp; &nbsp; &nbsp; &nbsp; <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.js" target="_blank">SM Fields (JS file)</a><br><br>                            Place below CSS code in "SM Fields (CSS file)" field under "Settings-Staff". If old Live Builder code was there, then remove that code first. <br>
+                            <red>Make sure to keep other code as it is which were added for other purposes.</red><br> &nbsp; &nbsp; &nbsp; &nbsp; <a class="button" href="https://raw.githubusercontent.com/githubbyad/Files/main/ufields.css" target="_blank">SM Fields (CSS file)</a><br>
                             <Br>
                             <stp>B</stp> Check "ufields" links in
                             <ff>HTML Head Section</ff> field. Make sure to put
@@ -849,13 +852,26 @@ $('.blbodymain').css('visibility', 'visible');
                     </li>
                     <li id="article_popup">
                         <h3>
-                            <hh>Article Popup</hh>On new server, Mobile article's URL has been changed and so we need to make that changes in site having
-                            <mht>Template#111</mht> design.<br><br>Open Layouts, Section Layout and Previews(<i>if added</i>) and look for below attribue in "A" tags.
-                            <textarea spellcheck="false" readonly style="height: 27px;">onClick="OpenPopup4('/mdetail.asp?pop=Y&hn={{HostName}}&he={{HostExt}}&l={{HeadingLink}}','iframe');"</textarea><br><br>Change this attrubute to below correct one,
-                            <textarea spellcheck="false" readonly style="height: 27px;">onClick="OpenPopup4('{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}','iframe');"</textarea><br><br><br>
+                            <hh>Article Popup</hh><br>
+                            <stp>A</stp> On new server, Mobile article's URL has been changed and so we need to make that changes in site having
+                            <mht>Template#111</mht> design.<br>&nbsp;&nbsp;&nbsp;&nbsp;Open Layouts, Section Layout and Previews(<i>if added</i>) and look for below attribue in "A" tags.
+                            <textarea spellcheck="false" readonly style="height: 27px; margin-left: 30px;">onClick="OpenPopup4('/mdetail.asp?pop=Y&hn={{HostName}}&he={{HostExt}}&l={{HeadingLink}}','iframe');"</textarea><br><br>&nbsp;&nbsp;&nbsp;&nbsp;Change
+                            this attrubute to below correct one,
+                            <textarea spellcheck="false" readonly style="height: 27px; margin-left: 30px;">onClick="OpenPopup4('{{PutDomain}}lib/mdetail.php?app=Y&pop=Y&dm=Yes&l={{HeadingLink}}','iframe');"</textarea><br><br><br>
                             <txt>
-                                <nt>NOTE</nt><i>Site reference: <a href="https://glendaledailyplanet.com" target="_blank">glendaledailyplanet.com</a></i></txt>
-
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <nt>NOTE</nt><i>Site reference: <a href="https://glendaledailyplanet.com" target="_blank">glendaledailyplanet.com</a></i></txt><br><br>
+                            <stp>B</stp> If Site is opening article in Popup, then we have issue when article is restricted. It is opening article of mobile format directly on desktop site.<br>&nbsp;&nbsp;&nbsp;&nbsp;To fix this, please add below JS in
+                            <fd>customform.js</fd> field under
+                            <ff>Settings-Staff</ff>.<br>
+                            <textarea spellcheck="false" readonly style="margin-left: 30px;">// BEGIN: Open Mobile URL in full site for Popup Templates
+if (window.location.href.indexOf("mdetail.php") != -1 && $(window).width() > 1024) {
+    mburl = location.href;
+    var mbar= new URL(mburl );
+    var murl= mbar.searchParams.get("l");
+    window.location.replace(murl);
+}
+// END: Open Mobile URL in full site for Popup Templates</textarea>
                         </h3>
                     </li>
                     <li id="mobile">
