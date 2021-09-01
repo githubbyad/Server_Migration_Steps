@@ -864,14 +864,14 @@ $('.blbodymain').css('visibility', 'visible');
                             <stp>B</stp> If Site is opening article in Popup, then we have issue when article is restricted. It is opening article of mobile format directly on desktop site.<br>&nbsp;&nbsp;&nbsp;&nbsp;To fix this, please add below JS in
                             <fd>customform.js</fd> field under
                             <ff>Settings-Staff</ff>.<br>
-                            <textarea spellcheck="false" readonly style="margin-left: 30px;">// BEGIN: Open Mobile URL in full site for Popup Templates
+                            <textarea spellcheck="false" readonly style="margin-left: 30px;">// BEGIN: Convert Mobile URL in full URL for Popup Templates
 if (window.location.href.indexOf("mdetail.php") != -1 && $(window).width() > 1024) {
     mburl = location.href;
     var mbar= new URL(mburl );
     var murl= mbar.searchParams.get("l");
     window.location.replace(murl);
 }
-// END: Open Mobile URL in full site for Popup Templates</textarea>
+// END: Convert Mobile URL in full URL for Popup Templates</textarea>
                         </h3>
                     </li>
                     <li id="mobile">
