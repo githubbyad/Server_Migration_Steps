@@ -452,8 +452,10 @@
                     <a href="#uused">Unused Code on new Server</a>
                     <a href="#form_layout">Form Layout</a>
                     <a href="#oldPhoto">Old PhotoGallery</a>
+
                 </h3>
                 <h3>
+                    <a href="#tlinks">Top/Bottom Links</a>
                     <a href="#form_width">Form Width Issue</a>
                     <a href="#date_field">Date Field</a>
                     <a href="#short_url">Short URL</a>
@@ -463,6 +465,8 @@
                     <a href="#old_search">Old Search</a>
                     <a href="#pages">Pages Update</a>
                     <a href="#article_popup">Article Popup</a>
+                </h3>
+                <h3>
                     <a href="#mobile">Mobile m.htm Page</a>
                     <a href="#Theme">Site Manager Theme</a>
 
@@ -682,10 +686,20 @@ right: 4vw;
 <script type="text/javascript" src="{{PutDomain}}ufields.js"></script></textarea>
                         </h3> <br>
                     </li>
-                    <li>
-                        <h3>We have demo sites having top links such as Contact Us", "Login", etc. We will now have new link for these Forms. Set below URL as for link.<br>
-                            <textarea spellcheck="false" readonly>https://SITENAME.COM/index0.htm?twindow=Form&smenu=115&pform=FORMNAME&mad=No&sname=target_form2.asp&site=SITENAME.COM</textarea> <br><br>
-                            <txt>Where, SITENAME.COM is the website URL and FORMNAME is the form name such as "ContactUs", {{Login}}</txt>
+                    <li id="tlinks">
+                        <h3>
+                            <hh>Top/Bottom Links</hh>We have demo sites having top links such as Contact Us", "Login", "Subscribe" etc. We will now have new link for these Forms. Set below URL as for link.<br>
+                            <textarea spellcheck="false" readonly><a href="{{PutDomain}}about-our-paper-p189-108.htm">ABOUT</a>
+
+<a href="{{PutDomain}}index0.htm?twindow=Form&smenu148=&pform=ContactUs&mad=No&sname=target_form2.asp&site={{PutDomainX}}">CONTACT</a>
+
+<a href="{{PutDomain}}index0.htm?twindow=Form&smenu148=&pform={{Login}}&mad=No&sname=target_form2.asp&site={{PutDomainX}}">LOGIN</a>
+
+<a href="{{PutDomain}}index0.htm?twindow=ServicePackage&smenu=112&mad=No&sname=target_service_package.asp&t={{PutDomainX}}">SUBSCRIBE</a>
+</textarea> <br><br>
+                            <txt>
+                                <nt>NOTE</nt>
+                                <cd>{{PutDomainX}}</cd> will be placed in the end as the value of "site" parameter.</txt>
                         </h3> <br>
                     </li>
                     <li>
