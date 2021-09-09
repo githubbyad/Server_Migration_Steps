@@ -356,6 +356,28 @@
             transition: 300ms linear;
         }
         
+        .quick_links a::before {
+            content: "";
+            width: 5px;
+            height: 80px;
+            background: black;
+            position: absolute;
+            -webkit-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            left: 0px;
+            top: -20px;
+            animation: _8UqQ8B 1.5s linear 6ms infinite;
+            opacity: 0.5;
+            z-index: 2;
+        }
+        
+        .quick_links a:hover::before {
+            background: white;
+            animation: _8UqQ8B 0.7s linear 6ms infinite;
+        }
+        
         .quick_links a {
             display: flex;
             float: left;
@@ -364,6 +386,12 @@
             align-items: center;
             padding: 5px;
             text-align: center;
+            min-width: 78px;
+            margin-right: 7px;
+            margin-left: 7px;
+            line-height: 26px;
+            position: relative;
+            overflow: hidden;
         }
         
         .quick_links h3 {
@@ -451,10 +479,11 @@
                     <a href="#lb">LIVE BUILDER</a>
                     <a href="#uused">Unused Code on new Server</a>
                     <a href="#form_layout">Form Layout</a>
-                    <a href="#oldPhoto">Old PhotoGallery</a>
+
 
                 </h3>
                 <h3>
+                    <a href="#oldPhoto">Old PhotoGallery</a>
                     <a href="#tlinks">Top/Bottom Links</a>
                     <a href="#form_width">Form Width Issue</a>
                     <a href="#date_field">Date Field</a>
@@ -464,9 +493,10 @@
                     <a href="#sitemap">Sitemap</a>
                     <a href="#old_search">Old Search</a>
                     <a href="#pages">Pages Update</a>
-                    <a href="#article_popup">Article Popup</a>
+
                 </h3>
                 <h3>
+                    <a href="#article_popup">Article Popup</a>
                     <a href="#mobile">Mobile m.htm Page</a>
                     <a href="#Theme">Site Manager Theme</a>
 
