@@ -558,18 +558,17 @@ SITENAME.COM/signin</textarea>
 
                             <hh>LOGIN form</hh><br><br>
                             <stp>A</stp> Visit
-                            <ff>Login</ff> page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
-                            <txt><i>Make sure to change website URL in place of "SITENAME.COM". For Template, use "bulletlink.com/template-1XX".</i></txt><br>
+                            <ff>Login</ff> page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br><br>
                             <ss>(System updated, be sure to review)</ss>
 
                             <textarea spellcheck="false" readonly style="width:90%;margin-right:10%;">new member: 
-<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">new member</a>
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{NewMember}}&mad=No&sname=target_form2.asp&site={{PutDomainX}}" style="color:#990000;">new member</a>
 
 forgot password?: 
-<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a>
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{ForgotPassword}}&mad=No&sname=target_form2.asp&site={{PutDomainX}}" style="color:#990000;">forgot password?</a>
 
 delete member: 
-<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{DeleteMember}}&mad=No&sname=target_form2.asp&site=SITENAME.COM" style="color:#990000;">forgot password?</a>
+<a href="/target_form2.asp?twindow=Form&smenu=106&pform={{DeleteMember}}&mad=No&sname=target_form2.asp&site={{PutDomainX}}" style="color:#990000;">forgot password?</a>
 </textarea>
                             <br><br><br><br>
                             <stp>B</stp> Add below JS and CSS in
