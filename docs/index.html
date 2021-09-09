@@ -559,7 +559,7 @@ SITENAME.COM/signin</textarea>
                             <hh>LOGIN form</hh><br><br>
                             <stp>A</stp> Visit
                             <ff>Login</ff> page and check for "new member" and "forgot password" links. Both link should have following URLs. Just look for "href" and remove "target" attribute if added previously.<br>
-                            <txt><i>Make sure to change website URL in place of "SITENAME.COM"</i></txt><br>
+                            <txt><i>Make sure to change website URL in place of "SITENAME.COM". For Template, use "bulletlink.com/template-1XX".</i></txt><br>
                             <ss>(System updated, be sure to review)</ss>
 
                             <textarea spellcheck="false" readonly style="width:90%;margin-right:10%;">new member: 
@@ -869,7 +869,7 @@ $('.blbodymain').css('visibility', 'visible');
                             <fd>customform.js</fd> field under
                             <ff>Settings-Staff</ff>.<br>
                             <textarea spellcheck="false" readonly style="margin-left: 30px;">// BEGIN: Convert Mobile URL in full URL for Popup Templates
-if (window.location.href.indexOf("mdetail.php") != -1 && $(window).width() > 1024) {
+if (window.location.href.indexOf("mdetail.php") != -1 && $(window).width() > 1024 && window == window.parent) {
     mburl = location.href;
     var mbar= new URL(mburl );
     var murl= mbar.searchParams.get("l");
